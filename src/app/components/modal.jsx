@@ -6,6 +6,8 @@ const CustomModal = ({isOpen, onRequestClose}) => {
 
     const [isRequest, setIsRequest] = useState(false)
 
+    const [file, setFile] = useState("")
+
     if (isRequest) {
         return <Modal
             isOpen={isOpen}
@@ -48,6 +50,7 @@ const CustomModal = ({isOpen, onRequestClose}) => {
         >
             <button className="Modal__CloseButton" onClick={onRequestClose}>X</button>
             <h2 className="Modal__Title">Ваш заказ</h2>
+            <img src="/office-paper.svg" alt="paper"/>
             <p>Пожалуйста, заполните форму для оформления заказа.</p>
             <form className="Modal__Form">
                 <div className="Modal_data">
@@ -61,6 +64,20 @@ const CustomModal = ({isOpen, onRequestClose}) => {
                 <div className="Modal_data">
                     <label className="Modal__Label">Адрес доставки:</label>
                     <input type="text" className="Modal__Input" required/>
+                </div>
+                <div className="Modal_data">
+                    <label className="Modal__Label">Прикрепить файл:</label>
+                    <div className="custom-file-upload">
+                        <input onChange={(e) => {
+                            const file = e.target.files[0];
+                            if (file) {
+                                setFile(file.name)
+                                console.log("Файл выбран: ", file.name);
+                            }
+                        }} type="file" id="fileInput" className="Modal__InputFile" required/>
+                        <label htmlFor="fileInput"
+                               className="Modal__FileLabel">{!file ? "Выберете файл" : `Выбран ${file}`}</label>
+                    </div>
                 </div>
                 <button onClick={() => {
                     setIsRequest(true)

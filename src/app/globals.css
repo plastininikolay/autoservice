@@ -30,6 +30,16 @@ header .menu li a, footer .menu li a {
 .hero {
   position: relative;
   text-align: center;
+  background-color: #1a0b00;
+}
+
+.hero h1 {
+  position: absolute;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%);
+  font-size: 128px;
+  color: wheat;
 }
 
 .hero img {
@@ -37,7 +47,7 @@ header .menu li a, footer .menu li a {
   height: auto;
   max-height: 800px;
   object-fit: cover;
-
+  opacity: 0.3;
 }
 
 .order-button {
@@ -46,12 +56,12 @@ header .menu li a, footer .menu li a {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 30px 45px;
-  background: linear-gradient(70deg, #3112d4, #7836a7);
+  background: linear-gradient(70deg, #b68367, #834649);
   color: white;
   border: none;
   font-size: 22px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .why-choose-us {
@@ -72,12 +82,12 @@ header .menu li a, footer .menu li a {
 }
 
 .reason img {
-  width: 260px;
-  height: 260px;
+  width: 170px;
+  height: 170px;
 }
 
 .testimonials {
-  background-color: #eaeaea;
+  background-color: #f7f7f7;
   padding: 50px;
   text-align: center;
 }
@@ -133,12 +143,6 @@ header .contact-info {
 header .contact-info p {
   margin: 0;
 }
-/* Стили для отзывов */
-.testimonials {
-  background-color: #eaeaea;
-  padding: 50px;
-  text-align: center;
-}
 
 .testimonials h2 {
   margin-bottom: 40px;
@@ -182,29 +186,29 @@ header .contact-info p {
 /* Стили для секции обратной связи */
 .feedback {
   position: relative;
-  background-color: #f5f5f5;
   text-align: center;
   height: 400px;
-
+  background: #dbd5d3;
 }
 
 .feedback h2 {
   position: absolute;
-  top: 60px;
+  top: 80px;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 46px;
-  color: #f5f5f5;
+  color: #320c00;
 }
 
 .feedback img {
   object-fit: cover;
   width: 100%;
   height: 400px;
+  opacity: 0.4;
 }
 
 .feedback .feedback-button {
-  background: linear-gradient(70deg, #3112d4, #7836a7);
+  background: linear-gradient(70deg, #b68367, #834649);
   color: white;
   border: none;
   padding: 15px 30px;
@@ -213,13 +217,13 @@ header .contact-info p {
   border-radius: 5px;
   transition: background-color 0.3s ease;
   position: absolute;
-  bottom: 60px;
+  bottom: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .feedback .feedback-button:hover {
-  background: linear-gradient(70deg, #3112d4, #7836a7);
+  background: linear-gradient(70deg, #b68367, #834649);
 }
 
 /* Стили для футера */
@@ -255,7 +259,7 @@ header .contact-info p {
 }
 /* Стили для списка услуг */
 .services {
-  background-color: #f9f9f9;
+  background-color: #f8f6f4;
   padding: 50px 330px;
 }
 
@@ -307,9 +311,13 @@ header .contact-info p {
   max-width: 90%; /* Адаптивная ширина */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тень */
 }
+.Modal__Content img{
+  width: 270px;
+  height: 270px;
+}
 
 .Modal__Title {
-  font-size: 24px;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
@@ -323,6 +331,7 @@ header .contact-info p {
 }
 
 .Modal__Input {
+  min-width: 200px;
   margin-bottom: 15px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -330,23 +339,19 @@ header .contact-info p {
 }
 
 .Modal__Button {
-  background: linear-gradient(70deg, #3112d4, #7836a7); /* Цвет кнопки */
+  background: linear-gradient(70deg, #b68367, #834649); /* Цвет кнопки */
   color: white; /* Цвет текста */
-  border: none;
   border-radius: 5px;
+  margin-top: 30px;
   padding: 10px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
 }
 
-.Modal__Button:hover {
-  background-color: #005bb5; /* Цвет кнопки при наведении */
-}
-
 .Modal__CloseButton {
   background-color: transparent; /* Прозрачный фон */
-  color: #0070f3; /* Цвет текста */
+  color: #803a0c; /* Цвет текста */
   border: none;
   cursor: pointer;
   margin-top: 10px;
@@ -394,7 +399,7 @@ header .contact-info p {
 }
 
 .option-button {
-  background: linear-gradient(70deg, #3112d4, #7836a7);
+  background: linear-gradient(70deg, #b68367, #834649);
   color: white;
   border: none;
   font-size: 20px;
@@ -405,5 +410,25 @@ header .contact-info p {
 }
 
 .option-button:hover {
-  background-color: #005bb5;
+  background: linear-gradient(70deg, #b68367, #834649);
+}
+.custom-file-upload {
+  position: relative;
+  display: inline-block;
+}
+
+.Modal__InputFile {
+  display: none; /* Скрываем стандартный input */
+}
+
+.Modal__FileLabel {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: 2px #b68367 solid;
+  max-width: 200px;
 }

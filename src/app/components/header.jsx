@@ -1,7 +1,7 @@
 export default function Header() {
     return (
         <header className="header">
-            <div className="logo">Мобильная Автомойка</div>
+            <div className="logo">Онлайн копицентр</div>
             <nav>
                 <ul className="menu">
                     <li><a href="#home">Главная</a></li>
