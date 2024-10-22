@@ -1,42 +1,409 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
 }
 
-a {
-  color: inherit;
+header, footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header .menu, footer .menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+header .menu li, footer .menu li {
+  margin: 0 15px;
+}
+
+header .menu li a, footer .menu li a {
+  color: white;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  max-height: 800px;
+  object-fit: cover;
+
+}
+
+.order-button {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 45px;
+  background: linear-gradient(70deg, #3112d4, #7836a7);
+  color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.why-choose-us {
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.reasons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.reason {
+  text-align: center;
+}
+
+.reason img {
+  width: 260px;
+  height: 260px;
+}
+
+.testimonials {
+  background-color: #eaeaea;
+  padding: 50px;
+  text-align: center;
+}
+
+.testimonials ul {
+  list-style: none;
+  padding: 0;
+}
+
+.testimonials li {
+  margin: 10px 0;
+  font-style: italic;
+}
+
+footer .contact-info {
+  margin-top: 10px;
+}
+/* Стили для header */
+header {
+  display: flex;
+  justify-content: space-between; /* Разделяет меню и контактную информацию по краям */
+  align-items: center; /* Выравнивание по вертикали */
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header .menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .menu li {
+  margin-left: 20px;
+}
+
+header .menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+header .contact-info {
+  text-align: right;
+}
+
+header .contact-info p {
+  margin: 0;
+}
+/* Стили для отзывов */
+.testimonials {
+  background-color: #eaeaea;
+  padding: 50px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 40px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Для адаптивности карточек на небольших экранах */
+  gap: 20px;
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.testimonial-card img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.testimonial-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.testimonial-card p {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+}
+/* Стили для секции обратной связи */
+.feedback {
+  position: relative;
+  background-color: #f5f5f5;
+  text-align: center;
+  height: 400px;
+
+}
+
+.feedback h2 {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 46px;
+  color: #f5f5f5;
+}
+
+.feedback img {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.feedback .feedback-button {
+  background: linear-gradient(70deg, #3112d4, #7836a7);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.feedback .feedback-button:hover {
+  background: linear-gradient(70deg, #3112d4, #7836a7);
+}
+
+/* Стили для футера */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+
+}
+
+.footer .contact-info {
+  text-align: right;
+}
+
+.footer .contact-info p {
+  margin: 0;
+}
+/* Стили для списка услуг */
+.services {
+  background-color: #f9f9f9;
+  padding: 50px 330px;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.service-list {
+  list-style: none; /* Убираем нумерацию списка */
+  padding: 0;
+}
+
+.service-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd; /* Легкое разделение между элементами */
+  padding-bottom: 10px;
+}
+
+.service-details {
+  max-width: 70%; /* Ограничиваем ширину для описания и названия */
+}
+
+.service-list h3 {
+  font-size: 20px;
+  margin: 0 0 5px 0;
+}
+
+.service-list p {
+  margin: 0;
+}
+
+.price {
+  font-weight: bold;
+  white-space: nowrap; /* Чтобы цена не переносилась */
+  margin-left: 20px;
+}
+
+.Modal__Content {
+  border: none;
+  border-radius: 10px;
+  background: #fff; /* Белый фон */
+  padding: 20px;
+  position: relative;
+  width: 400px;
+  max-width: 90%; /* Адаптивная ширина */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.Modal__Title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.Modal__Form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Modal__Label {
+  margin-bottom: 5px;
+}
+
+.Modal__Input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.Modal__Button {
+  background: linear-gradient(70deg, #3112d4, #7836a7); /* Цвет кнопки */
+  color: white; /* Цвет текста */
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.Modal__Button:hover {
+  background-color: #005bb5; /* Цвет кнопки при наведении */
+}
+
+.Modal__CloseButton {
+  background-color: transparent; /* Прозрачный фон */
+  color: #0070f3; /* Цвет текста */
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+  position: absolute;
+  right: 17px;
+  top: 9px;
+  text-align: right;
+}
+.Modal_data {
+  display: flex;
+  justify-content: space-between;
+}
+.service-options {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.option img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.option {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 40%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.option h3 {
+  margin-bottom: 10px;
+}
+
+.option-button {
+  background: linear-gradient(70deg, #3112d4, #7836a7);
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option-button:hover {
+  background-color: #005bb5;
 }
