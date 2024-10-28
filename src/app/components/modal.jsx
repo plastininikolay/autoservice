@@ -1,5 +1,5 @@
 // components/Modal.js
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Modal from 'react-modal';
 
 const CustomModal = ({isOpen, onRequestClose}) => {
@@ -8,10 +8,15 @@ const CustomModal = ({isOpen, onRequestClose}) => {
 
     const [file, setFile] = useState("")
 
+   const onClose = () => {
+       onRequestClose();
+       setIsRequest(false);
+   }
+
     if (isRequest) {
         return <Modal
             isOpen={isOpen}
-            onRequestClose={onRequestClose}
+            onRequestClose={onClose}
             className="Modal__Content"
             style={{
                 content: {
@@ -34,7 +39,7 @@ const CustomModal = ({isOpen, onRequestClose}) => {
     return (
         <Modal
             isOpen={isOpen}
-            onRequestClose={onRequestClose}
+            onRequestClose={onClose}
             className="Modal__Content"
             style={{
                 content: {

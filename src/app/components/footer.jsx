@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="menu">
-                Все права защищены © Мобильная автомойка
+                Все права защищены © Печать с точкой.
             </div>
             <div className="contact-info">
                 <p>📍 Ул. Центральная 1234, Ваш город</p>

@@ -22,14 +22,14 @@ export default function Home() {
             <Header/>
             <main>
                 {/* Секция 1: Главная страница с изображением и кнопкой */}
-                <section className="hero">
+                <section className="hero" id="hero">
                     <h1>Печать с точкой.</h1>
                     <Image src="/bg1.jpg" alt="Печать" width={1200} height={400}/>
                     <button onClick={openModal} className="order-button">Заказать сейчас</button>
                 </section>
 
                 {/* Секция 2: Почему выбрать нас */}
-                <section className="why-choose-us">
+                <section className="why-choose-us" id="why-choose-us">
                     <h2>Почему выбирают нас?</h2>
                     <div className="reasons">
                         <div className="reason">
@@ -50,88 +50,43 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                {/* Новый блок: Услуги мобильной автомойки */}
-                <section className="services">
+                {/* Новый блок: Услуги */}
+                <section className="services" id="services">
                     <h2>Наши услуги</h2>
                     <ol className="service-list">
                         <li>
                             <div className="service-details">
                                 <h3>Печать документов</h3>
-                                <p>Печать черно-белых и цветных документов в различных форматах, включая A4, A3 и
+                                <p>Печать черно-белых и цветных документов в различных форматах, включая A4, A3, А5, А1 и
                                     нестандартные размеры.</p>
                             </div>
-                            <p className="price">5 - 50 рублей за лист</p>
-                        </li>
-                        <li>
-                            <div className="service-details">
-                                <h3>Ксерокопирование</h3>
-                                <p>Быстрое и качественное ксерокопирование черно-белых и цветных документов.</p>
-                            </div>
-                            <p className="price">3 - 10 рублей за лист</p>
-                        </li>
-                        <li>
-                            <div className="service-details">
-                                <h3>Сканирование документов</h3>
-                                <p>Цифровое сканирование документов с возможностью сохранения в различных форматах (PDF,
-                                    JPEG и др.).</p>
-                            </div>
-                            <p className="price">10 - 30 рублей за лист</p>
+                            <p className="price">10 - 350 рублей за лист</p>
                         </li>
                         <li>
                             <div className="service-details">
                                 <h3>Ламинирование документов</h3>
                                 <p>Ламинирование документов для защиты от повреждений и придания долговечности.</p>
                             </div>
-                            <p className="price">50 - 150 рублей за документ</p>
+                            <p className="price">А3 - 80 рублей, А4 - 40 рублей, А5 - 30 рублей</p>
                         </li>
                         <li>
                             <div className="service-details">
                                 <h3>Переплет документов</h3>
                                 <p>Профессиональный переплет документов пластиковыми или металлическими пружинами.</p>
                             </div>
-                            <p className="price">200 - 500 рублей за документ</p>
+                            <p className="price">30 страниц - 50 рублей, за каждые 10 доп. страниц 10 рублей</p>
                         </li>
                         <li>
                             <div className="service-details">
-                                <h3>Изготовление визиток</h3>
-                                <p>Печать визитных карточек на качественной бумаге с возможностью индивидуального
-                                    дизайна.</p>
-                            </div>
-                            <p className="price">500 - 1500 рублей за 100 шт.</p>
-                        </li>
-                        <li>
-                            <div className="service-details">
-                                <h3>Изготовление буклетов</h3>
-                                <p>Создание и печать рекламных буклетов и флаеров.</p>
-                            </div>
-                            <p className="price">1000 - 3000 рублей за 100 шт.</p>
-                        </li>
-                        <li>
-                            <div className="service-details">
-                                <h3>Печать фото</h3>
+                                <h3>Печать фото на документы</h3>
                                 <p>Печать фотографий различных форматов на фотобумаге высокого качества.</p>
                             </div>
-                            <p className="price">10 - 100 рублей за фото</p>
-                        </li>
-                        <li>
-                            <div className="service-details">
-                                <h3>Нанесение изображений на сувениры</h3>
-                                <p>Печать логотипов и изображений на кружки, футболки и другие сувениры.</p>
-                            </div>
-                            <p className="price">500 - 2000 рублей за единицу</p>
-                        </li>
-                        <li>
-                            <div className="service-details">
-                                <h3>Дизайн и верстка</h3>
-                                <p>Разработка дизайна и верстка рекламных материалов, визиток, буклетов и других
-                                    печатных изделий.</p>
-                            </div>
-                            <p className="price">1000 - 5000 рублей за проект</p>
+                            <p className="price">400 - 450 рублей за фото</p>
                         </li>
                     </ol>
                 </section>
                 {/* Секция 3: Отзывы клиентов */}
-                <section className="testimonials">
+                <section className="testimonials" id="testimonials">
                     <h2>Отзывы клиентов</h2>
                     <div className="testimonial-cards">
                         <div className="testimonial-card">
@@ -151,7 +106,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <section className="feedback">
+                <section className="feedback" id="feedback">
                     <h2>Оставьте заявку на обратную связь</h2>
                     <Image src="/bg2.jpg" alt="bg2" width={1200} height={600}/>
                     <button onClick={openModal} className="feedback-button">Оставить заявку</button>

@@ -1,7 +1,12 @@
 export default function Header() {
     return (
         <header className="header">
-            <div className="logo">Онлайн копицентр</div>
+            <div className="logo">
+                <img src="/logo.svg" alt="icon"/>
+                <div>
+                    Онлайн копицентр
+                </div>
+            </div>
             <nav>
                 <ul className="menu">
                     <li><a href="#home">Главная</a></li>

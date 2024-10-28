@@ -1,8 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header, footer {
@@ -118,6 +126,11 @@ header {
 header .logo {
   font-size: 24px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+header .logo img {
+  height: 60px;
 }
 
 header .menu {
@@ -431,4 +444,63 @@ header .contact-info p {
   transition: background-color 0.3s ease;
   border: 2px #b68367 solid;
   max-width: 200px;
+}
+.ReactModal__Overlay {
+  z-index: 1000;
+}
+@media (max-width: 700px) {
+  p {
+    font-size: 18px;
+  }
+  header {
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+  header .contact-info {
+    text-align: center;
+  }
+  .reasons {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero h1 {
+    font-size: 36px;
+    top: 10%;
+  }
+  .services {
+    padding: 15px;
+  }
+  .feedback h2 {
+    font-size: 24px;
+  }
+  .feedback, .feedback img {
+    height: 300px;
+  }
+  .price {
+    white-space: wrap;
+  }
+  .service-details {
+    max-width: 55%;
+  }
+  .service-list li {
+    gap: 15px;
+  }
+  .order-button {
+    padding: 16px;
+    font-size: 16px;
+  }
+  .reason img {
+    width: 100px;
+    height: 100px;
+  }
+  .why-choose-us {
+    padding: 10px;
+  }
+  header .contact-info p, .footer .contact-info p {
+    font-size: 16px;
+  }
+  .footer .menu {
+    text-align: left;
+  }
 }
