@@ -503,4 +503,7 @@ header .contact-info p {
   .footer .menu {
     text-align: left;
   }
+  .feedback .feedback-button {
+    bottom: 5%;
+  }
 }
