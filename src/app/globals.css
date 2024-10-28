@@ -448,6 +448,10 @@ header .contact-info p {
 .ReactModal__Overlay {
   z-index: 1000;
 }
+.why-choose-us h5 {
+  width: 60%;
+  margin: 15px auto;
+}
 @media (max-width: 700px) {
   p {
     font-size: 18px;
@@ -505,5 +509,11 @@ header .contact-info p {
   }
   .feedback .feedback-button {
     bottom: 5%;
+  }
+  .why-choose-us h5 {
+    width: 95%;
+    margin: 5px auto;
+    font-weight: normal;
+    line-height: 1.5;
   }
 }
