@@ -377,6 +377,7 @@ header .contact-info p {
 .Modal_data {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .service-options {
   text-align: center;

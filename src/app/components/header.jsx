@@ -4,13 +4,14 @@ export default function Header() {
             <div className="logo">
                 <img src="/logo.svg" alt="icon"/>
                 <div>
-                    Онлайн копицентр
+                    Печать с точкой.
                 </div>
             </div>
             <nav>
                 <ul className="menu">
                     <li><a href="#home">Главная</a></li>
-                    <li><a href="#why-choose-us">Почему мы</a></li>
+                    <li><a href="#why-choose-us">Почему выбирают нас</a></li>
+                    <li><a href="#services">Наши услуги</a></li>
                     <li><a href="#testimonials">Отзывы</a></li>
                 </ul>
             </nav>
