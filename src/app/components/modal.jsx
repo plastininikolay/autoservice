@@ -67,6 +67,10 @@ const CustomModal = ({isOpen, onRequestClose}) => {
                     <input type="tel" className="Modal__Input" required/>
                 </div>
                 <div className="Modal_data">
+                    <label className="Modal__Label">Электронная почта:</label>
+                    <input type="email" className="Modal__Input" required/>
+                </div>
+                <div className="Modal_data">
                     <label className="Modal__Label">Адрес доставки:</label>
                     <input type="text" className="Modal__Input" required/>
                 </div>
